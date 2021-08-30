@@ -1,0 +1,9 @@
+h1 {
+    color: red;
+}
+
+.kitob_muqovasi {
+    height: 300px;
+    width: auto;
+    object-fit: cover!important;
+}

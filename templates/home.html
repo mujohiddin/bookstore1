@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Bosh sahifa{% endblock title %}
+
+{% block content %}
+    <h1>Bosh sahifa</h1>
+    <img class="kitob_muqovasi" src="{% static 'images/2060.jpg' %}">
+
+    <div>
+        {% if user.is_authenticated %}
+            {{ user.email }}!
+            </div>
+                <a class="btn btn-outline-primary mt-3" href="{% url 'account_logout' %}">Chiqish</a></p>
+        {% else %}
+            <p>Siz tizimga kirmagansiz!</p>
+            <a class="btn btn-outline-primary" href="{% url 'account_login' %}">Kirish</a>
+            <a class="btn btn-outline-primary" href="{% url 'account_signup' %}">Ro'yxatdan o'tish</a>
+        {% endif %}
+{% endblock content %}
+
+

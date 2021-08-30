@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Books{% endblock title %}
+{% block content %}
+    <ul >
+    {% for book in object_list %}
+        <li style="display: inline-block;list-style: none;margin-bottom: 5px; margin-top: 10px; margin-left: 10px;">
+        <div class="card" style="width: 18rem;">
+          <img src="{{book.coverURL}}" style="object-fit: cover;  padding: 10px;" class="card-img-top  kitob_muqovasi" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ book.title }}</h5>
+            <p class="card-text">Eng sara o'zbek jahon adabiyotlari faqat bizda!</p>
+            <a href="{{ book.get_absolute_url }}" class="btn btn-primary">Ba'tafsil</a>
+          </div>
+        </div>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock content %}
