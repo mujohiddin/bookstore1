@@ -1,0 +1,5 @@
+<div class="dropdown-menu">
+    {% for category in get_category_list %}
+        <a class="dropdown-item" href="/product/?cat={{ category.id }}">{{ category.name }}</a>
+    {% endfor %}
+</div>
